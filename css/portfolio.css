@@ -9,6 +9,7 @@ body {
     color: white;
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
+    overflow-x: hidden;
 }
 
 nav {
@@ -51,14 +52,18 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* don't wrap */
     margin: 100px 20px;
-    gap: 40px;
+    gap: 20px;
+    overflow-x: auto; /* enable horizontal scroll if needed */
+    scroll-snap-type: x mandatory;
 }
 
 .firstSection > div {
-    flex: 1 1 300px;
-    max-width: 500px;
+    flex: 0 0 auto;
+    width: 45%;
+    min-width: 280px;
+    scroll-snap-align: center;
 }
 
 .leftSection {
@@ -68,7 +73,7 @@ nav ul li a:hover {
 
 .rightSection img {
     width: 100%;
-    max-width: 350px;
+    max-width: 300px;
     display: block;
     margin: auto;
 }
@@ -88,7 +93,7 @@ nav ul li a:hover {
     text-align: center;
 }
 
-/* ------------------ Responsive Styles ------------------ */
+/* -------- Still keep header readable on small screens -------- */
 @media only screen and (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -106,12 +111,6 @@ nav ul li a:hover {
         margin: 10px 0;
     }
 
-    .firstSection {
-        flex-direction: column;
-        text-align: center;
-        margin: 50px 10px;
-    }
-
     .leftSection {
         font-size: 2rem;
     }
@@ -119,9 +118,5 @@ nav ul li a:hover {
     .secondSection {
         width: 95vw;
         padding: 10px;
-    }
-
-    .rightSection img {
-        width: 90%;
     }
 }
