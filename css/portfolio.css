@@ -1,122 +1,67 @@
-* {
-    margin: 0;
+*{
+    margin:0;
     padding: 0;
-    box-sizing: border-box;
 }
-
-body {
-    background-color: rgb(0, 0, 33);
+body{
+    background-color:rgb(0, 0, 33);
     color: white;
     font-family: 'Poppins', sans-serif;
-    line-height: 1.5;
-    overflow-x: hidden;
 }
-
-nav {
-    display: flex;
-    justify-content: space-between;
+nav{
+    display:flex;
+    justify-content: space-around;
     align-items: center;
-    padding: 0 20px;
     height: 70px;
-    background-color: rgb(18, 18, 62);
+    background-color: rgb(18,18,62);
 }
-
-nav .left {
-    font-size: 1.5rem;
-}
-
-nav ul {
+nav ul{
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0;
+    justify-content:center;
 }
-
-nav ul li {
+nav ul li{
     list-style: none;
-    margin: 0 15px;
+    margin:0 23px;
 }
-
-nav ul li a {
+nav ul li a{
     text-decoration: none;
-    color: white;
-    transition: color 0.3s ease, font-size 0.3s ease;
+   color: white;
 }
 
-nav ul li a:hover {
+nav ul li a:hover{
     color: rgb(89, 6, 243);
     font-size: 1.01rem;
 }
 
-.firstSection {
+
+.left{
+    font-size: 1.5rem;
+}
+.firstSection{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: nowrap; /* don't wrap */
-    margin: 100px 20px;
-    gap: 20px;
-    overflow-x: auto; /* enable horizontal scroll if needed */
-    scroll-snap-type: x mandatory;
+    margin: 130px 0;
+ 
 }
-
 .firstSection > div {
-    flex: 0 0 auto;
-    width: 45%;
-    min-width: 280px;
-    scroll-snap-align: center;
+    width: 30%;
+    
 }
+.leftSection{
+    font-size:3rem;
+  
 
-.leftSection {
-    font-size: 2.5rem;
-    text-align: center;
 }
-
-.rightSection img {
-    width: 100%;
-    max-width: 300px;
-    display: block;
-    margin: auto;
+.rightSection img{
+    width:80%;
 }
-
-.purple {
+.purple{
     color: rgb(115, 107, 228);
 }
-
-#element {
+#element{
     color: rgb(170, 107, 228);
 }
-
-.secondSection {
-    max-width: 90vw;
+.secondSection{
+    max-width: 80vw;
     margin: auto;
-    padding: 20px;
-    text-align: center;
-}
-
-/* -------- Still keep header readable on small screens -------- */
-@media only screen and (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 20px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .leftSection {
-        font-size: 2rem;
-    }
-
-    .secondSection {
-        width: 95vw;
-        padding: 10px;
-    }
 }
