@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+
+    <link rel="icon" type="image/png" href="./image/fevicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,13 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
     
-    <link rel="stylesheet" href="css\portfolio.css">
+    <link rel="stylesheet" href="css/portfolio.css">
 
-    <link rel="stylesheet" href="css\About.css">
+    <link rel="stylesheet" href="css/About.css">
 
-    <link rel="stylesheet" href="css\Skill.css">
+    <link rel="stylesheet" href="css/Skill.css">
 
     <link rel="stylesheet" href="css/resume.css">
+
+    <link rel="stylesheet" href="css/contact.css">
 
 
 
@@ -37,7 +41,8 @@
                     <li><a href="#skills-section">Skills</a></li>
                     <li><a href="#project-section">Projects</a></li>
                     <li><a href="#resume-section">Resume</a></li>
-                    <li><a href="#resume-section">Contact</a></li>
+                    <li><a href="#Contact-section">Contact</a></li>
+
 
                    
                     
@@ -48,7 +53,7 @@
         </nav>
     </header>
 
-    <section class="firstSection">
+    <section class="firstSection"   >  
         <div class="leftSection">
             Hi, My name is <span class="purple">Amit Shukla</span>
             <div> and I am a passionate</div>
@@ -66,7 +71,7 @@
 </div>
 <!-- ------------------------------------------------------------>
   <div class="container">
-    <div class="about-section">
+    <div class="about-section"   id="about-section">
         <h2 class="about-title">About Me</h2>
         <div class="about-content">
             <p>Hello! My name is <span class="highlight">Amit Shukla</span>. I am a passionate and dedicated <span class="highlight">Java Full stack Developer</span> with a strong interest in building scalable, responsive, and user-friendly web applications. As a fresher, I bring enthusiasm, curiosity, and a solid foundation in both frontend and backend technologies.</p>
@@ -90,10 +95,12 @@
 </div>
 <br>
 
-<div class="Skills-section">
+<div class="Skills-section" id="skills-section">
     <h2>My Skills</h2>
 
     <div class="Skills-container">
+
+          <!---Skill section-->
 
         <div class="skill-name">HTML, CSS, Bootstrap</div>
         <div class="skill-bar">
@@ -177,7 +184,8 @@
                 </div>
             </div>
         </div>
-
+        <br>
+        <br>
 
 
 
@@ -194,13 +202,16 @@
                 </p>
                 <div class="project-links">
                     <a href="#" class="btn">View Project</a>
+
                 </div>
             </div>
         </div>
         
     </div>
 </div>
-<br>
+
+<br> 
+ <br>
 <!------------------------------------------------------------------------------------------------------------------------------------>
 
         <!-- Resume section -->
@@ -240,7 +251,7 @@
             </li>
         </ul>
     </div>
-
+<br>
     <div class="section-title">Education</div>
     <div class="section-content education">
         <p><strong>Bachelor of Computer Application (BCA)</strong> | 2021-2024<br>
@@ -265,8 +276,60 @@
     </div>
     
 </div>
+<br>
+                    <br>
 <!--------------------------------------------------------------------------------------------------------------------->
+<br>
+<div class="Contact-section" id="Contact-section">
 
+                    <!--<h2>Contact me</h2>--> 
+
+    <div class="Skills-container">
+
+
+        <section class="contact-section" id="Contact-section">
+            <h1>Contact Me</h1>
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="from_name">Name</label>
+                <input type="text" id="from_name" name="from_name" required placeholder="Your Name">
+              </div>
+              <div class="form-group">
+                <label for="from_email">Email</label>
+                <input type="email" id="from_email" name="from_email" required placeholder="Your Email">
+              </div>
+              <div class="form-group">
+                <label for="from_phone">Phone Number</label>
+                <input type="tel" id="from_phone" name="from_phone" required placeholder="Your Phone Number">
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div id="success-message" style="display:none; color: green;">Thank you for your message!</div>
+            <div id="error-message" style="display:none; color: red;">Something went wrong. Please try again.</div>
+          </section>
+        
+          <script>
+            document.getElementById("contact-form").addEventListener("submit", function(event) {
+              event.preventDefault();
+        
+              emailjs.sendForm('service_l92y86c', 'template_bpk7c3m', this)
+                .then(function(response) {
+                  document.getElementById('success-message').style.display = 'block';
+                  document.getElementById('error-message').style.display = 'none';
+                  document.getElementById("contact-form").reset(); // Optional: Reset the form
+                }, function(error) {
+                  document.getElementById('success-message').style.display = 'none';
+                  document.getElementById('error-message').style.display = 'block';
+                  console.error('EmailJS Error:', error);
+                });
+            });
+          </script>
+    </div>
+</div>
 
 
    
