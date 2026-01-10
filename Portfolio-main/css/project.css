@@ -1,24 +1,15 @@
 body {
-<<<<<<< HEAD
     font-family: 'Poppins', sans-serif;
     /* Background handled in portfolio.css */
     margin: 0;
     padding: 0;
     color: var(--text-primary);
-=======
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f7fa;
-    color: #333;
->>>>>>> b1e8b9148758e1b974128c9bc1cb1e2e4372f54e
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 30px auto;
-<<<<<<< HEAD
     background-color: transparent;
     /* Remove white background */
     padding: 30px;
@@ -35,35 +26,17 @@ h1 {
     font-size: 36px;
     margin-bottom: 40px;
     text-transform: uppercase;
-=======
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    color: #2575fc;
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 20px;
->>>>>>> b1e8b9148758e1b974128c9bc1cb1e2e4372f54e
 }
 
 .projects {
     display: grid;
-<<<<<<< HEAD
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     /* Better responsiveness */
-=======
-    grid-template-columns: repeat(2, 1fr);
->>>>>>> b1e8b9148758e1b974128c9bc1cb1e2e4372f54e
     gap: 30px;
     margin-top: 30px;
 }
 
 .project-card {
-<<<<<<< HEAD
     background: var(--card-bg);
     /* Glassmorphism */
     backdrop-filter: blur(10px);
@@ -72,68 +45,41 @@ h1 {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-=======
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
->>>>>>> b1e8b9148758e1b974128c9bc1cb1e2e4372f54e
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-<<<<<<< HEAD
     box-shadow: 0 10px 30px rgba(108, 99, 255, 0.3);
     /* Purple glow */
-=======
->>>>>>> b1e8b9148758e1b974128c9bc1cb1e2e4372f54e
 }
 
 .project-img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-<<<<<<< HEAD
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-details {
     padding: 25px;
-=======
-    border-bottom: 5px solid #2575fc;
-}
-
-.project-details {
-    padding: 20px;
->>>>>>> b1e8b9148758e1b974128c9bc1cb1e2e4372f54e
 }
 
 .project-title {
     font-size: 24px;
     font-weight: bold;
-<<<<<<< HEAD
     color: var(--white);
     margin-bottom: 10px;
-=======
-    color: #2575fc;
->>>>>>> b1e8b9148758e1b974128c9bc1cb1e2e4372f54e
 }
 
 .project-description {
     font-size: 16px;
     line-height: 1.6;
-<<<<<<< HEAD
     color: var(--text-secondary);
-=======
-    color: #555;
->>>>>>> b1e8b9148758e1b974128c9bc1cb1e2e4372f54e
     margin-top: 10px;
 }
 
 .project-message {
     font-size: 14px;
-<<<<<<< HEAD
     color: var(--accent-color);
     margin-top: 15px;
     font-style: italic;
@@ -141,32 +87,18 @@ h1 {
 
 .project-links {
     margin-top: 20px;
-=======
-    color: #777;
-    margin-top: 10px;
-}
-
-.project-links {
-    margin-top: 15px;
->>>>>>> b1e8b9148758e1b974128c9bc1cb1e2e4372f54e
     text-align: center;
 }
 
 .btn {
-<<<<<<< HEAD
     background: var(--accent-gradient);
     color: var(--white);
-=======
-    background-color: #2575fc;
-    color: #fff;
->>>>>>> b1e8b9148758e1b974128c9bc1cb1e2e4372f54e
     border: none;
     padding: 12px 25px;
     border-radius: 30px;
     font-size: 16px;
     cursor: pointer;
     text-decoration: none;
-<<<<<<< HEAD
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: inline-block;
 }
@@ -174,13 +106,6 @@ h1 {
 .btn:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(108, 99, 255, 0.5);
-=======
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #6a11cb;
->>>>>>> b1e8b9148758e1b974128c9bc1cb1e2e4372f54e
 }
 
 /* Responsive Design */

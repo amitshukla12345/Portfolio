@@ -1,17 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Me</title>
-  <link rel="stylesheet" href="css/contact.css" />
-  <!-- Include EmailJS SDK -->
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function () {
-=======
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -21,15 +9,10 @@
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script type="text/javascript">
     (function(){
->>>>>>> b1e8b9148758e1b974128c9bc1cb1e2e4372f54e
       emailjs.init('C85lBja8HGbkTZ7DQ'); // Initialize EmailJS with your User ID
     })();
   </script>
 </head>
-<<<<<<< HEAD
-
-=======
->>>>>>> b1e8b9148758e1b974128c9bc1cb1e2e4372f54e
 <body>
   <section class="contact-section">
     <h1>Contact Me</h1>
@@ -57,17 +40,6 @@
   </section>
 
   <script>
-<<<<<<< HEAD
-    document.getElementById("contact-form").addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      emailjs.sendForm('service_l92y86c', 'template_bpk7c3m', this)
-        .then(function (response) {
-          document.getElementById('success-message').style.display = 'block';
-          document.getElementById('error-message').style.display = 'none';
-          document.getElementById("contact-form").reset(); // Optional: Reset the form
-        }, function (error) {
-=======
     document.getElementById("contact-form").addEventListener("submit", function(event) {
       event.preventDefault();
 
@@ -77,7 +49,6 @@
           document.getElementById('error-message').style.display = 'none';
           document.getElementById("contact-form").reset(); // Optional: Reset the form
         }, function(error) {
->>>>>>> b1e8b9148758e1b974128c9bc1cb1e2e4372f54e
           document.getElementById('success-message').style.display = 'none';
           document.getElementById('error-message').style.display = 'block';
           console.error('EmailJS Error:', error);
@@ -85,9 +56,4 @@
     });
   </script>
 </body>
-<<<<<<< HEAD
-
 </html>
-=======
-</html>
->>>>>>> b1e8b9148758e1b974128c9bc1cb1e2e4372f54e
