@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Me</title>
-  <link rel="stylesheet" href="css/contact.css"/>
+  <link rel="stylesheet" href="css/contact.css" />
   <!-- Include EmailJS SDK -->
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script type="text/javascript">
-    (function(){
+    (function () {
       emailjs.init('C85lBja8HGbkTZ7DQ'); // Initialize EmailJS with your User ID
     })();
   </script>
 </head>
+
 <body>
   <section class="contact-section">
     <h1>Contact Me</h1>
@@ -40,15 +42,15 @@
   </section>
 
   <script>
-    document.getElementById("contact-form").addEventListener("submit", function(event) {
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
       event.preventDefault();
 
       emailjs.sendForm('service_l92y86c', 'template_bpk7c3m', this)
-        .then(function(response) {
+        .then(function (response) {
           document.getElementById('success-message').style.display = 'block';
           document.getElementById('error-message').style.display = 'none';
           document.getElementById("contact-form").reset(); // Optional: Reset the form
-        }, function(error) {
+        }, function (error) {
           document.getElementById('success-message').style.display = 'none';
           document.getElementById('error-message').style.display = 'block';
           console.error('EmailJS Error:', error);
@@ -56,4 +58,5 @@
     });
   </script>
 </body>
+
 </html>
