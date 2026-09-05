@@ -5,216 +5,553 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Portfolio of Amit Shukla, a passionate Java Full Stack Developer specializing in Spring Boot, React, and MySQL.">
+        content="Portfolio of Amit Shukla — Java Full Stack Developer specializing in Spring Boot, React, and MySQL. Open to opportunities in Mumbai.">
     <meta name="author" content="Amit Shukla">
-    <link rel="icon" type="image/png" href="./image/favicon.png">
-    <title>Amit Shukla | Full Stack Developer</title>
+    <meta name="keywords" content="Amit Shukla, Java Developer, Full Stack, Spring Boot, React, MySQL, Portfolio">
+    <link rel="icon" type="image/png" href="./image/fevicon.png">
+    <title>Amit Shukla | Java Full Stack Developer</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/portfolio.css">
-
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            // NOTE: You need to replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
-            // emailjs.init("YOUR_PUBLIC_KEY"); 
-        })();
-    </script>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
+    <!-- ========== HEADER ========== -->
+    <header id="header">
         <div class="container">
             <nav>
-                <div class="logo">Amit.Dev</div>
-                <!-- Menu Toggle Button for Mobile -->
-                <div class="menu-toggle" id="menu-toggle">
-                    &#9776; <!-- Hamburger Icon -->
+                <a href="#home" class="logo">Amit.Dev</a>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" role="button" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
+
                 <div class="nav-links" id="nav-links">
-                    <a href="#about" onclick="closeMenu()">About</a>
-                    <a href="#skills" onclick="closeMenu()">Skills</a>
-                    <a href="#projects" onclick="closeMenu()">Projects</a>
-                    <a href="#contact" onclick="closeMenu()">Contact</a>
+                    <a href="#home" onclick="closeMenu()" class="active" id="nav-home">Home</a>
+                    <a href="#about" onclick="closeMenu()" id="nav-about">About</a>
+                    <a href="#skills" onclick="closeMenu()" id="nav-skills">Skills</a>
+                    <a href="#projects" onclick="closeMenu()" id="nav-projects">Projects</a>
+                    <a href="#contact" onclick="closeMenu()" id="nav-contact">Contact</a>
+                    <a href="amit k  shukla.pdf" class="nav-resume-btn" target="_blank" onclick="closeMenu()">
+                        <i class="fa-solid fa-eye"></i> Resume
+                    </a>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- ========== HERO SECTION ========== -->
     <section class="hero-section" id="home">
         <div class="container">
-            <div class="hero-section"> <!-- inner flex wrapper -->
+            <div class="hero-inner">
+
+                <!-- Left: Content -->
                 <div class="hero-content">
+                    <div class="hero-tag">
+                        <span class="dot"></span>
+                        Available for opportunities
+                    </div>
                     <h3>Hello, I'm</h3>
-                    <h1>Amit Shukla <br> <span class="highlight" id="element"></span></h1>
-                    <p style="color: var(--text-secondary); margin-bottom: 30px; font-size: 1.1rem;">
-                        Passionate about building scalable web applications and solving complex problems with code.
+                    <h1>
+                        <span class="name-highlight">Amit Shukla</span>
+                    </h1>
+                    <div class="typed-wrapper">
+                        <span id="typed-element"></span>
+                    </div>
+                    <p class="hero-desc">
+                        Passionate about building scalable, responsive web applications. I craft clean code and
+                        intuitive user experiences using modern Java & JavaScript technologies.
                     </p>
                     <div class="hero-btns">
-                        <a href="#projects" class="btn">View Work</a>
-                        <a href="amit k  shukla2.pdf" class="btn"
-                            style="background: transparent; border: 2px solid var(--accent-color); margin-left: 15px;"
-                            download>Download Resume</a>
+                        <a href="#projects" class="btn">
+                            <i class="fa-solid fa-eye"></i> View My Work
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fa-solid fa-paper-plane"></i> Let's Talk
+                        </a>
+                    </div>
+
+                    <!-- Stats Bar -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Projects Built</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">IBM</div>
+                            <div class="stat-label">Certified</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">BCA</div>
+                            <div class="stat-label">Graduate</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">6+</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Right: Image -->
                 <div class="hero-image">
-                    <img src="image/developers.png" alt="Developer Illustration">
+                    <div class="hero-image-wrapper">
+                        <img src="image/amit_port.jpeg" alt="Amit Shukla — Java Full Stack Developer">
+                    </div>
+
+                    <!-- Floating Badges -->
+                    <div class="hero-badge hero-badge-1">
+                        <i class="fa-brands fa-java" style="color:#f7b731;"></i>
+                        Spring Boot
+                    </div>
+                    <div class="hero-badge hero-badge-2">
+                        <i class="fa-brands fa-react" style="color:#00c9ff;"></i>
+                        React.js
+                    </div>
+                    <div class="hero-badge hero-badge-3">
+                        <i class="fa-solid fa-database" style="color:#6c63ff;"></i>
+                        MySQL
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>scroll</span>
+        </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ========== ABOUT SECTION ========== -->
     <section class="about-section" id="about">
         <div class="container">
-            <h2 class="section-title">About <span>Me</span></h2>
-            <div class="about-content">
-                <div class="about-text">
+            <h2 class="section-title reveal">About <span>Me</span></h2>
+            <p class="section-subtitle reveal">A passionate developer with a love for clean code and great UI</p>
+
+            <div class="about-grid">
+                <!-- Left: Text -->
+                <div class="about-text-block reveal-left">
                     <p>
-                        Hello! My name is <strong style="color: var(--white);">Amit Shukla</strong>. I am a passionate
-                        and dedicated
-                        <span style="color: var(--accent-color);">Java Full Stack Developer</span> with a strong
-                        interest in building scalable,
-                        responsive, and user-friendly web applications.
+                        Hello! I'm <strong>Amit Shukla</strong>, a passionate
+                        <span class="accent-text">Java Full Stack Developer</span> based in Mumbai. I love
+                        turning complex problems into elegant, scalable web solutions.
                     </p>
                     <p>
-                        I hold a Bachelor’s degree in Computer Applications (BCA) from Tilak Maharashtra Vidyapeeth,
-                        Pune, and I’m
-                        currently completing a Full Stack Java Development course at IT Vedant. I also hold an IBM
-                        certification in Java.
+                        I hold a <strong>Bachelor's degree in Computer Applications (BCA)</strong> from
+                        Tilak Maharashtra Vidyapeeth, Pune and I'm completing an advanced
+                        <strong>Full Stack Java Development</strong> program at IT Vedant. I also hold an
+                        <strong>IBM certification in Java</strong>.
                     </p>
                     <p>
-                        My technical skill set includes HTML, CSS, JavaScript, Java, Spring Boot, MySQL, and React.
-                        I am highly motivated to join a dynamic team where I can contribute to meaningful projects.
+                        My core stack includes <span class="accent-text">Java, Spring Boot, React.js,
+                        MySQL, HTML, CSS,</span> and <span class="accent-text">JavaScript</span>. I'm
+                        highly motivated to join a dynamic team where I can contribute to meaningful projects
+                        and grow as an engineer.
                     </p>
+                    <div style="margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap;">
+                        <a href="amit k  shukla.pdf" class="btn" download>
+                            <i class="fa-solid fa-download"></i> Download Resume
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fa-solid fa-envelope"></i> Hire Me
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Info Cards -->
+                <div class="about-info-cards reveal-right">
+
+                    <!-- Education Card -->
+                    <div class="about-card">
+                        <div class="about-card-title">
+                            <i class="fa-solid fa-graduation-cap"></i> Education
+                        </div>
+                        <div class="edu-item">
+                            <div class="edu-degree">Bachelor of Computer Applications (BCA)</div>
+                            <div class="edu-school">Tilak Maharashtra Vidyapeeth, Pune</div>
+                            <div class="edu-year">2021 – 2024</div>
+                        </div>
+                        <div class="edu-item">
+                            <div class="edu-degree">Higher Secondary (HSC — Commerce)</div>
+                            <div class="edu-school">Nitin Godiwala Junior College</div>
+                            <div class="edu-year">2019 – 2021</div>
+                        </div>
+                        <div class="edu-item">
+                            <div class="edu-degree">Secondary School Certificate (SSC)</div>
+                            <div class="edu-school">Gandhi Shikshan Bhavan I.J. Patel High School</div>
+                            <div class="edu-year">2013 – 2019</div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications Card -->
+                    <div class="about-card">
+                        <div class="about-card-title">
+                            <i class="fa-solid fa-certificate"></i> Certifications
+                        </div>
+                        <div class="cert-list">
+                            <div class="cert-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                Master in Java Full Stack — ITVedant Education (Pursuing)
+                            </div>
+                            <div class="cert-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                IBM Certification — Core Java
+                            </div>
+                            <div class="cert-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                Core Web Design Certification
+                            </div>
+                            <div class="cert-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                MySQL Certification
+                            </div>
+                            <div class="cert-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                Web Designing — Raj Computer Institute
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ========== SKILLS SECTION ========== -->
     <section class="skills-section" id="skills">
         <div class="container">
-            <h2 class="section-title">My <span>Skills</span></h2>
-            <div class="skills-grid">
+            <h2 class="section-title reveal">My <span>Skills</span></h2>
+            <p class="section-subtitle reveal">Technologies I work with daily</p>
 
-                <!-- Frontend -->
-                <div class="skill-card">
+            <!-- Frontend -->
+            <div class="skills-category-title reveal">
+                <i class="fa-solid fa-desktop"></i> &nbsp;Frontend Development
+            </div>
+            <div class="skills-grid reveal">
+                <div class="skill-card" data-percent="90">
                     <div class="skill-info">
-                        <span>HTML, CSS, Bootstrap</span>
-                        <span>90%</span>
+                        <div class="skill-name">
+                            <i class="fa-brands fa-html5" style="color:#e34f26;"></i> HTML & CSS
+                        </div>
+                        <span class="skill-percent">90%</span>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 90%"></div>
+                        <div class="progress" style="--target-width: 90%"></div>
                     </div>
                 </div>
 
-                <div class="skill-card">
+                <div class="skill-card" data-percent="75">
                     <div class="skill-info">
-                        <span>JavaScript</span>
-                        <span>70%</span>
+                        <div class="skill-name">
+                            <i class="fa-brands fa-bootstrap" style="color:#7952b3;"></i> Bootstrap
+                        </div>
+                        <span class="skill-percent">75%</span>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 70%"></div>
+                        <div class="progress" style="--target-width: 75%"></div>
                     </div>
                 </div>
 
-                <div class="skill-card">
+                <div class="skill-card" data-percent="70">
                     <div class="skill-info">
-                        <span>React.js</span>
-                        <span>60%</span>
+                        <div class="skill-name">
+                            <i class="fa-brands fa-js" style="color:#f7df1e;"></i> JavaScript
+                        </div>
+                        <span class="skill-percent">70%</span>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 60%"></div>
+                        <div class="progress" style="--target-width: 70%"></div>
                     </div>
                 </div>
 
-                <!-- Backend -->
-                <div class="skill-card">
+                <div class="skill-card" data-percent="65">
                     <div class="skill-info">
-                        <span>Java (Core + OOPs)</span>
-                        <span>75%</span>
+                        <div class="skill-name">
+                            <i class="fa-brands fa-react" style="color:#61dafb;"></i> React.js
+                        </div>
+                        <span class="skill-percent">65%</span>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 75%"></div>
+                        <div class="progress" style="--target-width: 65%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="skills-category-title reveal" style="margin-top: 40px;">
+                <i class="fa-solid fa-server"></i> &nbsp;Backend & Database
+            </div>
+            <div class="skills-grid reveal">
+                <div class="skill-card" data-percent="75">
+                    <div class="skill-info">
+                        <div class="skill-name">
+                            <i class="fa-brands fa-java" style="color:#f7b731;"></i> Java (Core + OOPs)
+                        </div>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="--target-width: 75%"></div>
                     </div>
                 </div>
 
-                <div class="skill-card">
+                <div class="skill-card" data-percent="80">
                     <div class="skill-info">
-                        <span>Spring Boot & REST APIs</span>
-                        <span>85%</span>
+                        <div class="skill-name">
+                            <i class="fa-solid fa-leaf" style="color:#6db33f;"></i> Spring Boot & REST APIs
+                        </div>
+                        <span class="skill-percent">80%</span>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 85%"></div>
+                        <div class="progress" style="--target-width: 80%"></div>
                     </div>
                 </div>
 
-                <div class="skill-card">
+                <div class="skill-card" data-percent="85">
                     <div class="skill-info">
-                        <span>MySQL / SQL</span>
-                        <span>85%</span>
+                        <div class="skill-name">
+                            <i class="fa-solid fa-database" style="color:#00758f;"></i> MySQL / SQL
+                        </div>
+                        <span class="skill-percent">85%</span>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 85%"></div>
+                        <div class="progress" style="--target-width: 85%"></div>
                     </div>
                 </div>
 
+                <div class="skill-card" data-percent="80">
+                    <div class="skill-info">
+                        <div class="skill-name">
+                            <i class="fa-solid fa-code-branch" style="color:#f05033;"></i> Git & GitHub
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="--target-width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skills-category-title reveal" style="margin-top: 40px;">
+                <i class="fa-solid fa-wrench"></i> &nbsp;Tools & Other
+            </div>
+            <div class="tools-grid reveal">
+                <div class="tool-tag"><i class="fa-solid fa-code" style="color:#007acc;"></i> VS Code</div>
+                <div class="tool-tag"><i class="fa-solid fa-fire" style="color:#c12828;"></i> IntelliJ IDEA</div>
+                <div class="tool-tag"><i class="fa-brands fa-github"></i> GitHub</div>
+                <div class="tool-tag"><i class="fa-solid fa-bolt" style="color:#f7df1e;"></i> Postman</div>
+                <div class="tool-tag"><i class="fa-solid fa-object-group" style="color:#ff7c5c;"></i> Figma</div>
+                <div class="tool-tag"><i class="fa-solid fa-puzzle-piece" style="color:#6db33f;"></i> Problem Solving</div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ========== PROJECTS SECTION ========== -->
     <section class="projects-section" id="projects">
         <div class="container">
-            <h2 class="section-title">Featured <span>Projects</span></h2>
+            <h2 class="section-title reveal">Featured <span>Projects</span></h2>
+            <p class="section-subtitle reveal">Real-world applications I've built end-to-end</p>
+
             <div class="projects-grid">
 
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <img src="./image/frontend.png" alt="Save Nature" class="project-img">
+                <!-- Project 1: Save Nature -->
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <img src="./image/frontend.png" alt="Save Nature Website" class="project-img">
+                        <div class="project-overlay"></div>
+                    </div>
                     <div class="project-info">
                         <h3>Save Nature</h3>
-                        <p>A website dedicated to raising awareness about environmental conservation and encouraging
-                            eco-friendly activities.</p>
+                        <p>A website raising awareness about environmental conservation, encouraging eco-friendly
+                            activities like tree planting and waste reduction. Fully responsive with smooth
+                            animations.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
                         <div class="project-links">
-                            <a href="https://amitshukla12345.github.io/save-earth/" class="btn-sm" target="_blank">View
-                                Live</a>
+                            <a href="https://amitshukla12345.github.io/save-earth/" class="btn-sm" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/amitshukla12345/save-earth" class="btn-sm" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-brands fa-github"></i> Code
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <img src="./image/Notesharing.png" alt="Notes Sharing" class="project-img">
+                <!-- Project 2: NotesSharing -->
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <img src="./image/Notesharing.png" alt="Notes Sharing Website" class="project-img">
+                        <div class="project-overlay"></div>
+                    </div>
                     <div class="project-info">
-                        <h3>NotesSharing Website</h3>
-                        <p>A platform for students to share and access educational resources, fostering a collaborative
-                            learning community.</p>
+                        <h3>NotesSharing Platform</h3>
+                        <p>A collaborative platform for students to upload and download educational notes, fostering
+                            a knowledge-sharing community. Built with a robust backend for seamless exchange.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">Bootstrap</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Django</span>
+                        </div>
                         <div class="project-links">
-                            <button class="btn-sm" style="cursor: not-allowed; opacity: 0.6;">Code Coming Soon</button>
+                            <button class="btn-sm" style="cursor:not-allowed; opacity:0.5;" disabled>
+                                <i class="fa-solid fa-clock"></i> Coming Soon
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <img src="./image/railway.png" alt="Railway Booking" class="project-img">
+                <!-- Project 3: Railway Booking -->
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <img src="./image/railway.png" alt="Railway Booking System" class="project-img">
+                        <div class="project-overlay"></div>
+                    </div>
                     <div class="project-info">
                         <h3>Railway Booking System</h3>
-                        <p>A comprehensive system for booking train tickets, checking availability, and managing
-                            reservations efficiently.</p>
+                        <p>A full-featured train ticket booking system with real-time seat availability checking,
+                            reservation management, and a clean user interface for a seamless booking experience.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Java</span>
+                            <span class="project-tag">Spring Boot</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">REST API</span>
+                        </div>
                         <div class="project-links">
-                            <button class="btn-sm" style="cursor: not-allowed; opacity: 0.6;">Code Coming Soon</button>
+                            <button class="btn-sm" style="cursor:not-allowed; opacity:0.5;" disabled>
+                                <i class="fa-solid fa-clock"></i> Coming Soon
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Namo Brahma Studios -->
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <img src="image/Namobrahma_image.png" alt="Namo Brahma Studios" class="project-img">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Namo Brahma Studios</h3>
+                        <p>A modern, responsive website built for a creative studio to showcase their portfolio and services.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://namobrahmastudios.com/" class="btn-sm" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Alfaaz Packers -->
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <img src="image/packer&mover.png" alt="Alfaaz Packers & Movers" class="project-img">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Alfaaz Packers & Movers</h3>
+                        <p>A professional business website for a Mumbai-based packing and moving company, featuring service listings and inquiries.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://alfaazpackers.com/" class="btn-sm" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Universal Pesticide -->
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <img src="image/Pesticide.png" alt="Universal Pesticide" class="project-img">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Universal Pesticide</h3>
+                        <p>A premium pest control solutions website featuring detailed service descriptions, functionality, and a responsive layout.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://universalpesticide.netlify.app/" class="btn-sm" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: Tour and Travel -->
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <img src="image/Travel.png" alt="Tour and Travel" class="project-img">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Tour and Travel</h3>
+                        <p>A modern and responsive website for a travel agency, showcasing various tour packages and destinations.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://amitshukla12345.github.io/pandey/" class="btn-sm" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: Jagadguru Hariprapannacharyaji -->
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <img src="image/katha.png" alt="Jagadguru Hariprapannacharyaji" class="project-img">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Spiritual Organization</h3>
+                        <p>A beautifully designed spiritual and religious website for sharing teachings, events, and community updates.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://jagadguruhariprapannacharyaji.com/" class="btn-sm" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -223,92 +560,328 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ========== CONTACT SECTION ========== -->
     <section class="contact-section" id="contact">
         <div class="container">
-            <h2 class="section-title">Get In <span>Touch</span></h2>
-            <div class="contact-container">
-                <form id="contact-form">
-                    <div class="form-group">
-                        <label for="from_name">Name</label>
-                        <input type="text" id="from_name" name="from_name" required placeholder="Enter your name">
+            <h2 class="section-title reveal">Get In <span>Touch</span></h2>
+            <p class="section-subtitle reveal">Have a project in mind or want to hire me? Let's connect!</p>
+
+            <div class="contact-grid">
+
+                <!-- Left: Contact Info -->
+                <div class="contact-info-col reveal-left">
+                    <h3>Let's work together</h3>
+                    <p>I'm currently open to full-time roles, internships, and freelance projects. Feel free to
+                        reach out — I respond within 24 hours.</p>
+
+                    <div class="contact-info-items">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <div class="label">Email</div>
+                                <div class="value">amitshukla22509@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <div class="label">Phone</div>
+                                <div class="value">+91 83692 01097</div>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <div class="label">Location</div>
+                                <div class="value">Vile Parle, Mumbai, India</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="from_email">Email</label>
-                        <input type="email" id="from_email" name="from_email" required placeholder="Enter your email">
+
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/in/amit-shukla-35147526b/" target="_blank"
+                            rel="noopener noreferrer" class="social-btn" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/amitshukla12345" target="_blank"
+                            rel="noopener noreferrer" class="social-btn" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="mailto:amitshukla22509@gmail.com" class="social-btn" title="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
                     </div>
-                    <div class="form-group">
-                        <label for="from_phone">Phone</label>
-                        <input type="tel" id="from_phone" name="from_phone" required
-                            placeholder="Enter your phone number">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required placeholder="How can I help you?"></textarea>
-                    </div>
-                    <button type="submit" class="btn" style="width: 100%;">Send Message</button>
-                </form>
-                <div id="success-message" style="display:none; color: #4cd137; text-align: center; margin-top: 15px;">
-                    Message sent successfully!</div>
-                <div id="error-message" style="display:none; color: #e84118; text-align: center; margin-top: 15px;">
-                    Failed to send message. Please try again.</div>
+                </div>
+
+                <!-- Right: Form -->
+                <div class="contact-form-col reveal-right">
+                    <form id="contact-form" action="https://formsubmit.co/51b7bd1049100f5b2cf3061fb10d6759" method="POST">
+                        <!-- Honeypot field for spam prevention -->
+                        <input type="text" name="_honey" style="display:none">
+                        <!-- Disable Captcha for smoother UX -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Email Design Template -->
+                        <input type="hidden" name="_template" value="box">
+                        <!-- Custom Email Subject -->
+                        <input type="hidden" name="_subject" value="New Message from Portfolio!">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required
+                                    placeholder="Rahul Sharma">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required
+                                    placeholder="rahul@example.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone"
+                                placeholder="+91 98765 43210">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required
+                                placeholder="Hi Amit! I'd like to discuss a project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn form-submit-btn" id="submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+
+                        <div id="success-message" class="form-msg success">
+                            <i class="fa-solid fa-circle-check"></i> Message sent successfully! I'll get back to you soon.
+                        </div>
+                        <div id="error-message" class="form-msg error">
+                            <i class="fa-solid fa-circle-xmark"></i> Failed to send. Please email me directly at amitshukla22509@gmail.com
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ========== FOOTER ========== -->
     <footer>
         <div class="container">
-            <div class="footer-socials">
-                <a href="https://www.linkedin.com/in/amit-shukla-35147526b/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/amitshukla12345" target="_blank">GitHub</a>
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="logo">Amit.Dev</div>
+                    <p>Java Full Stack Developer based in Mumbai, building scalable and user-friendly web applications.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <div class="footer-col-title">Quick Links</div>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About Me</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Connect -->
+                <div>
+                    <div class="footer-col-title">Connect</div>
+                    <div class="footer-socials-row">
+                        <a href="https://www.linkedin.com/in/amit-shukla-35147526b/" target="_blank"
+                            rel="noopener noreferrer" class="social-btn" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/amitshukla12345" target="_blank"
+                            rel="noopener noreferrer" class="social-btn" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="mailto:amitshukla22509@gmail.com" class="social-btn" title="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <p>&copy; 2024 Amit Shukla. All rights reserved.</p>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Amit Shukla. All rights reserved.</p>
+                <p>Built with <i class="fa-solid fa-heart" style="color:#ff4d6d;"></i> using HTML, CSS & JavaScript</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" title="Back to top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ========== SCRIPTS ========== -->
+    <!-- Typed.js -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
     <script>
-        // Typed.js Effect
-        var typed = new Typed('#element', {
-            strings: ['Java Full Stack Developer', 'Problem Solver', 'Tech Enthusiast'],
-            typeSpeed: 50,
-            backSpeed: 30,
+        // ── Typed.js Effect ──────────────────────────────
+        var typed = new Typed('#typed-element', {
+            strings: ['Java Full Stack Developer', 'Spring Boot Engineer', 'React.js Developer', 'Problem Solver'],
+            typeSpeed: 55,
+            backSpeed: 35,
+            backDelay: 1800,
             loop: true
         });
 
-        // Mobile Menu Toggle
+        // ── Dynamic Copyright Year ────────────────────────
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // ── Mobile Menu Toggle ────────────────────────────
         const menuToggle = document.getElementById('menu-toggle');
         const navLinks = document.getElementById('nav-links');
 
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('open');
         });
 
-        // Close menu when a link is clicked
-        function closeMenu() {
-            if (navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
+        menuToggle.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                navLinks.classList.toggle('active');
+                menuToggle.classList.toggle('open');
             }
+        });
+
+        function closeMenu() {
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('open');
         }
 
-        // Contact Form Handling
+        // ── Sticky Header Shadow ──────────────────────────
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // ── Active Nav Link on Scroll ─────────────────────
+        const sections = document.querySelectorAll('section[id]');
+        const navItems = document.querySelectorAll('.nav-links a[id]');
+
+        function updateActiveNav() {
+            const scrollPos = window.scrollY + 100;
+            sections.forEach(section => {
+                const top = section.offsetTop;
+                const height = section.offsetHeight;
+                const id = section.getAttribute('id');
+                const navItem = document.getElementById('nav-' + id);
+                if (scrollPos >= top && scrollPos < top + height && navItem) {
+                    navItems.forEach(n => n.classList.remove('active'));
+                    navItem.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNav);
+
+        // ── Scroll Reveal ─────────────────────────────────
+        const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 80);
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+        revealEls.forEach(el => revealObserver.observe(el));
+
+        // ── Skill Bar Scroll Animation ────────────────────
+        const skillCards = document.querySelectorAll('.skill-card');
+
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const card = entry.target;
+                    const progressBar = card.querySelector('.progress');
+                    const percent = card.getAttribute('data-percent');
+                    if (progressBar && percent) {
+                        progressBar.style.width = percent + '%';
+                        card.classList.add('animated');
+                    }
+                    skillObserver.unobserve(card);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        skillCards.forEach(card => skillObserver.observe(card));
+
+        // ── Back to Top Button ────────────────────────────
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ── Contact Form ──────────────────────────────────
         document.getElementById("contact-form").addEventListener("submit", function (event) {
             event.preventDefault();
 
-            emailjs.sendForm('service_l92y86c', 'template_bpk7c3m', this)
-                .then(function (response) {
+            const form = this;
+            const submitBtn = document.getElementById('submit-btn');
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
                     document.getElementById('success-message').style.display = 'block';
                     document.getElementById('error-message').style.display = 'none';
-                    document.getElementById("contact-form").reset();
-                }, function (error) {
+                    form.reset();
+                } else {
                     document.getElementById('success-message').style.display = 'none';
                     document.getElementById('error-message').style.display = 'block';
-                    console.error('EmailJS Error:', error);
-                });
+                }
+            })
+            .catch(error => {
+                document.getElementById('success-message').style.display = 'none';
+                document.getElementById('error-message').style.display = 'block';
+                console.error('FormSubmit Error:', error);
+            })
+            .finally(() => {
+                submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+                submitBtn.disabled = false;
+            });
         });
     </script>
+
 </body>
 
 </html>
