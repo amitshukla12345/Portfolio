@@ -320,6 +320,15 @@ nav {
     animation: pulse-glow 8s ease-in-out infinite;
 }
 
+
+.hero-section .container {
+    width: 100%;
+    /* 👈 ye add karo — asli fix yahi hai */
+}
+
+
+
+
 .hero-section::after {
     content: '';
     position: absolute;
