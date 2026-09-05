@@ -162,11 +162,11 @@
                         highly motivated to join a dynamic team where I can contribute to meaningful projects
                         and grow as an engineer.
                     </p>
-                    <div style="margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap;">
-                        <a href="amit k  shukla.pdf" class="btn" download>
+                    <div class="about-btns" style="margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap;">
+                        <a href="amit k  shukla.pdf" class="btn" download style="flex: 1; justify-content: center;">
                             <i class="fa-solid fa-download"></i> Download Resume
                         </a>
-                        <a href="#contact" class="btn btn-outline">
+                        <a href="#contact" class="btn btn-outline" style="flex: 1; justify-content: center;">
                             <i class="fa-solid fa-envelope"></i> Hire Me
                         </a>
                     </div>
@@ -571,7 +571,7 @@
                 <!-- Left: Contact Info -->
                 <div class="contact-info-col reveal-left">
                     <h3>Let's work together</h3>
-                    <p>I'm currently open to full-time roles, internships, and freelance projects. Feel free to
+                    <p>I'm currently open to full-time roles and freelance projects. Feel free to
                         reach out — I respond within 24 hours.</p>
 
                     <div class="contact-info-items">
@@ -634,32 +634,46 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" required
-                                    placeholder="Rahul Sharma">
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-user"></i>
+                                    <input type="text" id="name" name="name" required
+                                        placeholder="Rahul Sharma">
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" required
-                                    placeholder="rahul@example.com">
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <input type="email" id="email" name="email" required
+                                        pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                                        title="Please enter a valid email address (e.g., rahul@example.com)"
+                                        placeholder="rahul@example.com">
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone"
-                                placeholder="+91 98765 43210">
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-phone"></i>
+                                <input type="tel" id="phone" name="phone" required
+                                    minlength="10" maxlength="10" pattern="[0-9]{10}"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                                    title="Please enter a 10-digit mobile number"
+                                    placeholder="9876543210">
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" required
-                                placeholder="Hi Amit! I'd like to discuss a project..."></textarea>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-message"></i>
+                                <textarea id="message" name="message" required
+                                    placeholder="Hi Amit! I'd like to discuss a project..."></textarea>
+                            </div>
                         </div>
                         <button type="submit" class="btn form-submit-btn" id="submit-btn">
                             <i class="fa-solid fa-paper-plane"></i> Send Message
                         </button>
 
-                        <div id="success-message" class="form-msg success">
-                            <i class="fa-solid fa-circle-check"></i> Message sent successfully! I'll get back to you soon.
-                        </div>
                         <div id="error-message" class="form-msg error">
                             <i class="fa-solid fa-circle-xmark"></i> Failed to send. Please email me directly at amitshukla22509@gmail.com
                         </div>
@@ -747,18 +761,25 @@
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             menuToggle.classList.toggle('open');
+            document.body.classList.toggle('no-scroll');
+            document.documentElement.classList.toggle('no-scroll');
         });
 
         menuToggle.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
                 navLinks.classList.toggle('active');
                 menuToggle.classList.toggle('open');
+                document.body.classList.toggle('no-scroll');
+                document.documentElement.classList.toggle('no-scroll');
             }
         });
 
         function closeMenu() {
             navLinks.classList.remove('active');
             menuToggle.classList.remove('open');
+            document.body.classList.remove('no-scroll');
+            document.documentElement.classList.remove('no-scroll');
         }
 
         // ── Sticky Header Shadow ──────────────────────────
@@ -862,16 +883,14 @@
             })
             .then(response => {
                 if (response.ok) {
-                    document.getElementById('success-message').style.display = 'block';
+                    document.getElementById('success-popup').classList.add('active');
                     document.getElementById('error-message').style.display = 'none';
                     form.reset();
                 } else {
-                    document.getElementById('success-message').style.display = 'none';
                     document.getElementById('error-message').style.display = 'block';
                 }
             })
             .catch(error => {
-                document.getElementById('success-message').style.display = 'none';
                 document.getElementById('error-message').style.display = 'block';
                 console.error('FormSubmit Error:', error);
             })
@@ -880,7 +899,24 @@
                 submitBtn.disabled = false;
             });
         });
+
+        // ── Popup Modal Logic ────────────────────────────
+        function closePopup() {
+            document.getElementById('success-popup').classList.remove('active');
+        }
     </script>
+
+    <!-- Success Popup Modal -->
+    <div id="success-popup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3>Thank You!</h3>
+            <p>Your message has been sent successfully. I will get back to you as soon as possible.</p>
+            <button class="btn" onclick="closePopup()" style="width: 100%; justify-content: center;">OK</button>
+        </div>
+    </div>
 
 </body>
 
